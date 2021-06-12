@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "b750c850-ee82-4137-89ba-f422dbb42f7a",
+		"name": "POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Proyectos",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto/create?pNombre=Proyecto 6&pFechaInicio=2021-04-15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto",
+								"create"
+							],
+							"query": [
+								{
+									"key": "pNombre",
+									"value": "Proyecto 6"
+								},
+								{
+									"key": "pFechaInicio",
+									"value": "2021-04-15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListSinItemsOrbyFinicioDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/proyectos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"proyectos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModifyNombreProyecto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto/modifyNombreProyecto?pIdProyecto=3db686b1-327e-47a2-9d3d-2f7adc0f92f7&pNuevoNombre=Proyecto 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Proyecto",
+								"modifyNombreProyecto"
+							],
+							"query": [
+								{
+									"key": "pIdProyecto",
+									"value": "3db686b1-327e-47a2-9d3d-2f7adc0f92f7"
+								},
+								{
+									"key": "pNuevoNombre",
+									"value": "Proyecto 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddItemAProyecto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Proyecto/addItemAProyecto?pIdProyecto=3db686b1-327e-47a2-9d3d-2f7adc0f92f7&pNombre=Bug funcionalidad 3.2.1&pPrioridad=1&pIdTipoItem=9c1741fc-e5f3-434d-ace6-94f1eac518e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"Proyecto",
+								"addItemAProyecto"
+							],
+							"query": [
+								{
+									"key": "pIdProyecto",
+									"value": "3db686b1-327e-47a2-9d3d-2f7adc0f92f7"
+								},
+								{
+									"key": "pNombre",
+									"value": "Bug funcionalidad 3.2.1",
+									"description": "Nombre del Item"
+								},
+								{
+									"key": "pPrioridad",
+									"value": "1",
+									"description": "Prioridad del Item"
+								},
+								{
+									"key": "pIdTipoItem",
+									"value": "9c1741fc-e5f3-434d-ace6-94f1eac518e6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListItemsProyecto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Item/?pIdProyecto=3db686b1-327e-47a2-9d3d-2f7adc0f92f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Item",
+								""
+							],
+							"query": [
+								{
+									"key": "pIdProyecto",
+									"value": "3db686b1-327e-47a2-9d3d-2f7adc0f92f7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "LastEstadoItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Item/lastEstadoItem?pIdItem=e94541a8-f6e9-4aca-8f49-df60caca483b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Item",
+								"lastEstadoItem"
+							],
+							"query": [
+								{
+									"key": "pIdItem",
+									"value": "e94541a8-f6e9-4aca-8f49-df60caca483b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEstadoAItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Item/addEstadoItem?pIdItem=e94541a8-f6e9-4aca-8f49-df60caca483b&pIdTipoEstado=1a71b67f-fc36-42d6-ada1-b061d0cbc491",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Item",
+								"addEstadoItem"
+							],
+							"query": [
+								{
+									"key": "pIdItem",
+									"value": "e94541a8-f6e9-4aca-8f49-df60caca483b"
+								},
+								{
+									"key": "pIdTipoEstado",
+									"value": "1a71b67f-fc36-42d6-ada1-b061d0cbc491"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUltimoEstadoItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/Item/deleteLastEstadoItem?pIdItem=e94541a8-f6e9-4aca-8f49-df60caca483b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Item",
+								"deleteLastEstadoItem"
+							],
+							"query": [
+								{
+									"key": "pIdItem",
+									"value": "e94541a8-f6e9-4aca-8f49-df60caca483b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListEstadosItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estados/?pIdItem=e94541a8-f6e9-4aca-8f49-df60caca483b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estados",
+								""
+							],
+							"query": [
+								{
+									"key": "pIdItem",
+									"value": "e94541a8-f6e9-4aca-8f49-df60caca483b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estados",
+			"item": [
+				{
+					"name": "ShowEstado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estados/showEstado?pIdEstado=039ec43a-e94a-40f7-9c3e-04fa71c36ed1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estados",
+								"showEstado"
+							],
+							"query": [
+								{
+									"key": "pIdEstado",
+									"value": "039ec43a-e94a-40f7-9c3e-04fa71c36ed1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipos Item",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/TipoItem/create?pnombre=Elaborar pliego de contratación",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TipoItem",
+								"create"
+							],
+							"query": [
+								{
+									"key": "pnombre",
+									"value": "Elaborar pliego de contratación"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/TipoItem/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TipoItem",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipos Estado",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/TipoEstado/create?pNombre=PP&pEsInicial=false&pEsFinal=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TipoEstado",
+								"create"
+							],
+							"query": [
+								{
+									"key": "pNombre",
+									"value": "PP"
+								},
+								{
+									"key": "pEsInicial",
+									"value": "false"
+								},
+								{
+									"key": "pEsFinal",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/TipoEstado/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"TipoEstado",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
